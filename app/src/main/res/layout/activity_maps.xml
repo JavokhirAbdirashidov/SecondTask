@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MapsActivity">
+
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <fragment
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="158dp"
+                      android:layout_marginTop="55dp"
+                      android:layout_gravity="bottom"
+                      android:orientation="vertical"
+                      android:background="@android:color/white"
+                      android:id="@+id/region_layout"
+                      android:paddingLeft="24dp"
+                      android:paddingRight="24dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Urikzor (B. Boboyev) house 106"
+                    android:id="@+id/region_txt"
+                    style="@style/Address"
+                    android:gravity="center"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_gravity="center"/>
+
+            <ImageView
+                    android:layout_height="2dp"
+                    android:layout_width="312dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/address_line"
+                    android:layout_marginBottom="17dp"/>
+            <Button
+                    android:layout_width="312dp"
+                    android:layout_gravity="center"
+                    android:layout_height="50dp"
+                    android:text="Set pick up"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button_corner"
+                    android:textSize="18sp" android:textStyle="bold"/>
+        </LinearLayout>
+<View android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/background_scrim"
+      android:background="#B3525151"
+      />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="255dp"
+                      android:layout_marginTop="55dp"
+                      android:layout_gravity="bottom"
+                      android:orientation="vertical"
+                      android:background="@android:color/white"
+                      android:id="@+id/region_layout1">
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_flag_service_not_working"
+                    android:layout_gravity="center" android:layout_marginTop="24dp" android:layout_marginBottom="18dp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The region is not supported "
+                    style="@style/RegionIsNotSupported"
+                    android:gravity="center"
+                    android:layout_marginBottom="12dp"
+                    android:layout_gravity="center"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="At the moment, the service My Taxi\n not working in this region."
+                    style="@style/AtTheMoment"
+                    android:gravity="center" android:layout_gravity="center" android:layout_marginBottom="24dp"/>
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="50dp"
+                    android:text="Enter your pick up location"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button_corner"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" android:layout_marginRight="25dp" android:layout_marginLeft="25dp"
+                    android:layout_marginBottom="16dp"/>
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>
