@@ -59,7 +59,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val marker=MarkerOptions().position(usa).draggable(true).title("Marker in USA")
         mMap.addMarker(marker).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.ic_pin_eta_main))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(usa))
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(14.2f), 400, null)
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(13.2f), 400, null)
 
         val polygon=drawRouteOnMap(mMap)
 
@@ -89,9 +89,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     region_layout1.visibility= GONE
                     background_scrim.visibility= GONE
 
-                    geo= Geocoder(this@MapsActivity, Locale.ENGLISH)
-                    addresss=geo.getFromLocation(marker.position.latitude, marker.position.longitude,1)
-                    if(addresss.isNotEmpty()) region_txt.text=addresss.get(0).getAddressLine(0)
+//                    geo= Geocoder(this@MapsActivity, Locale.ENGLISH)
+//                    addresss=geo.getFromLocation(marker.position.latitude, marker.position.longitude,1)
+//                    if(addresss.isNotEmpty()) region_txt.text=addresss.get(0).getAddressLine(0)
 
                 }
                 else{
